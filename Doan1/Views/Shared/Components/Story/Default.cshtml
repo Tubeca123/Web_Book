@@ -1,0 +1,77 @@
+﻿@using Doan1.Ulitities
+@model IList<Doan1.Models.Book>
+<!-- Trend Section Begin -->
+<section class="trend spad">
+    <div class="container">
+        <div class="row">
+@*             <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="trend__content">
+                    <div class="section-title">
+                        <h4>Sách mới</h4>
+                    </div>
+                    @foreach (var item1 in Model.Where(m => m.IsNew == true).Take(3))
+                    {
+                    <div class="trend__item">
+						
+                        <div class="trend__item__pic">
+                                <img src="@item1.Image" style="max-width: 120px; max-height: 120px;" alt="">
+                        </div>
+                        
+                        <div class="trend__item__text">
+                            <h6>@item1.BookName</h6>
+                            <div class="product__price">@item1.Price VNĐ</div>
+                        </div>
+                        
+                    </div>
+					}
+                </div>
+            </div> *@
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="trend__content">
+                    <div class="section-title">
+                        <h4>Sách giảm giá</h4>
+                    </div>
+                    @foreach (var item2 in Model.Where(m => m.IsSale == true).Take(3))
+                    {
+                        <div class="trend__item">
+
+                            <div class="trend__item__pic">
+                                <img src="@item2.Image" style="max-width: 120px; max-height: 120px;" alt="">
+                            </div>
+
+                            <div class="product__item__text">
+                                <h6><a asp-controller="Book" asp-action="Details" asp-route-id="@item2.BookID">@item2.BookName</a></h6>
+                                <div class="product__price">@item2.Price VNĐ</div>
+                            </div>
+
+                        </div>
+                    }
+
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6">
+                <div class="trend__content">
+                    <div class="section-title">
+                        <h4>Sách bán chạy</h4>
+                    </div>
+                    @foreach (var items in Model.Where(m => m.IsBestSeller == true).Take(3))
+                    {
+                        <div class="trend__item">
+
+                            <div class="trend__item__pic">
+                                <img src="@items.Image" style="max-width: 120px; max-height: 120px;" alt="">
+                            </div>
+
+                            <div class="product__item__text">
+                                <h6><a asp-controller="Book" asp-action="Details" asp-route-id="@items.BookID">@items.BookName</a></h6>
+                                <div class="product__price">@items.Price VNĐ</div>
+                            </div>
+
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Trend Section End -->

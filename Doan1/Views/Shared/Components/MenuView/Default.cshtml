@@ -1,13 +1,106 @@
 ﻿@using Doan1.Ulitities
 @model IList<Doan1.Models.Menu>
-
 <!-- Header Section Begin -->
+<style>
+/*     .dropdown {
+        position: relative;
+        display: inline-block;
+    } */
+
+    .button-content {
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .dropbtn {
+        border: none;
+        background-color: white;
+    }
+
+    #img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .dropdown-toggle {
+        margin-left: 1px;
+    }
+
+    .dropdown-content {
+        width: auto;
+        display: none;
+        position: absolute;
+        background-color: #ffffff;
+        min-width: 150px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #f6f9ff;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 10px ;
+            text-decoration: none;
+            display: block;
+            text-decoration: none;
+            border-bottom: 1px solid aliceblue;
+        }
+
+    .dropdown-header {
+        text-align: center;
+        align-content: center;
+    }
+
+ /*    .search-container {
+        position: relative;
+        display: inline-block;
+    }
+
+    input[name="keywords"] {
+        
+        width: 120px;
+        height:27px;
+        padding-right: 35px; /* Dùng để để chừa chỗ cho button */
+    }
+
+    button.icon_search {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 25px; /* Điều chỉnh độ rộng theo ý muốn */
+        height: 25px; /* Điều chỉnh độ cao theo ý muốn */
+        background-color: rgba(76, 175, 80, 0);
+        color:black;
+        border: none;
+        border-radius: 0 4px 4px 0; /* Bo góc chỉ ở phía bên phải */
+        cursor: pointer;
+    } */
+</style>
+@{
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("myDropdown");
+            if (dropdownContent.style.display === "none") {
+                dropdownContent.style.display = "block";
+            } else {
+                dropdownContent.style.display = "none";
+            }
+        }
+
+    </script>
+}
 <header class="header">
     <div class="container-fluid">
         <div class="row">
             <div class="col-xl-3 col-lg-2">
                 <div class="header__logo">
-                    <a href="./index.html"><img src="~/img/logo2.png" alt=""></a>
+                    <a href="https://localhost:7226/admin"><img src="~/img/logo2.png" alt=""></a>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-7">
@@ -39,24 +132,46 @@
                 </nav>
             </div>
             <div class="col-lg-3">
+
+
                 <div class="header__right">
-                    <div class="header__right__auth">
-                        <a href="#">Đăng Nhập</a>
-                        <a href="#">Đăng Kí</a>
-                    </div>
+                    
+                    @if (!Functions.IsLogin())
+                    {
+                        <div class="header__right__auth">
+                            <a href="~/Home/Login">Đăng Nhập</a>
+                            <a href="~/Home/Register">Đăng Kí</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="header__right__auth">
+                            <button class="dropbtn" onclick="toggleDropdown()">
+                                <div class="button-content">
+                                    <span class="d-none d-md-block dropdown-toggle" style="font-weight:600">@Functions._UserName</span>
+                                </div>
+                            </button>
+                            <div class="dropdown-content" id="myDropdown">
+                                <li class="dropdown">
+                                    <h6 >@Functions._FullName</h6>
+                                </li>
+                                <a class="dropdown" asp-controller="Customer" asp-action="Index">Thông tin cá nhân</a>
+                                <a class="dropdown" href="#">Cài đặt</a>
+                                <a class="dropdown" asp-controller="Logout" asp-action="Logout">Đăng xuất</a>
+                            </div>
+                        </div>
+
+                    }
                     <ul class="header__right__widget">
                         <li><span class="icon_search search-switch"></span></li>
                         <li>
                             <a href="#">
                                 <span class="icon_heart_alt"></span>
-                                <div class="tip">2</div>
+                                <div class="tip">99</div>
                             </a>
                         </li>
                         <li>
-                            <a href="#">
-                                <span class="icon_bag_alt"></span>
-                                <div class="tip">2</div>
-                            </a>
+                            @await Component.InvokeAsync("CartWidget")
                         </li>
                     </ul>
                 </div>
@@ -67,4 +182,5 @@
         </div>
     </div>
 </header>
+
 <!-- Header Section End -->

@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Doan1.Models;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Doan1.Ulitities;
 
 namespace Startup.Areas.Admin.Controllers
 {
@@ -13,11 +14,13 @@ namespace Startup.Areas.Admin.Controllers
         {
             _context = context;
         }
+
         public IActionResult Index()
         {
             var mnList = _context.Menus.OrderBy(m => m.MenuID).ToList();
             return View(mnList);
         }
+
         public IActionResult Delete(int? id)
         {
             if (id == null || id == 0) {

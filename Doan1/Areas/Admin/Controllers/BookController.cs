@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Doan1.Models;
+using Doan1.Ulitities;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+
 namespace Doan1.Areas.Admin.Controllers
 {
     [Area("Admin")]
@@ -13,13 +16,14 @@ namespace Doan1.Areas.Admin.Controllers
         }
         public IActionResult Create()
         {
+            
             var mnList=(from m in _context.BookCategorys select new SelectListItem()
             {
                 Text=m.Name,Value=m.BookCategoryID.ToString()
             }).ToList();
             mnList.Insert(0, new SelectListItem()
             {
-                Text = "----Select----",
+                Text = "----Xem thêm----",
                 Value = string.Empty
             });
             ViewBag.mnList=mnList;
@@ -39,12 +43,15 @@ namespace Doan1.Areas.Admin.Controllers
         }
         public IActionResult Index()
         {
-            var items = _context.Books.Where(m=>m.IsActive==true).ToList();
+            
+            var items = _context.Books.ToList();
+            ViewBag.BookctList=_context.BookCategorys.Where(m=>m.IsActive==true).ToList();
             return View(items);
         }
 
         public IActionResult Delete(int? id)
         {
+            
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -54,7 +61,6 @@ namespace Doan1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
             return View(mn);
         }
         [HttpPost]
@@ -72,6 +78,7 @@ namespace Doan1.Areas.Admin.Controllers
 
         public IActionResult Edit(int? id)
         {
+            
             if (id == null || id == 0)
             {
                 return NotFound();

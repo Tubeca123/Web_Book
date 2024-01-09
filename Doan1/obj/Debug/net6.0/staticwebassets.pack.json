@@ -4965,24 +4965,48 @@
       "PackagePath": "staticwebassets\\files\\img\\blog\\sidebar\\fp-3.jpg"
     },
     {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\anime.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\anime.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\huyenbi-giatuong.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\huyenbi-giatuong.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\kiemhiep.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\kiemhiep.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\langmanngonlu.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\langmanngonlu.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\phiêuluu.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\phiêuluu.jpg"
+    },
+    {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\pic1.jpg",
       "PackagePath": "staticwebassets\\files\\img\\categories\\pic1.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\pic2.jpg",
-      "PackagePath": "staticwebassets\\files\\img\\categories\\pic2.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\sachvebac.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\sachvebac.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\pic3.jpg",
-      "PackagePath": "staticwebassets\\files\\img\\categories\\pic3.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\thieunhi.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\thieunhi.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\pic4.jpg",
-      "PackagePath": "staticwebassets\\files\\img\\categories\\pic4.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\trinhtham.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\trinhtham.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\pic5.jpg",
-      "PackagePath": "staticwebassets\\files\\img\\categories\\pic5.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\tuvi.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\tuvi.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\categories\\Ẩm thực.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\categories\\Ẩm thực.jpg"
     },
     {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\discount.jpg",
@@ -5065,6 +5089,14 @@
       "PackagePath": "staticwebassets\\files\\img\\product\\hai-van-dam-duoi-bien-1.jpg"
     },
     {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\kiem-lai.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\kiem-lai.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\lan-kha-ky-duyen.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\lan-kha-ky-duyen.jpg"
+    },
+    {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\neu-toi-biet-duoc-o-tuoi-20-1.jpg",
       "PackagePath": "staticwebassets\\files\\img\\product\\neu-toi-biet-duoc-o-tuoi-20-1.jpg"
     },
@@ -5073,12 +5105,28 @@
       "PackagePath": "staticwebassets\\files\\img\\product\\nhung-su-that-lam-giau-tu-mang-xa-hoi.jpg"
     },
     {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\pham-nhan-tu-tien.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\pham-nhan-tu-tien.jpg"
+    },
+    {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\quy-luat-bat-bien-trong-marketing.jpg",
       "PackagePath": "staticwebassets\\files\\img\\product\\quy-luat-bat-bien-trong-marketing.jpg"
     },
     {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\thien-dao-do-thu-quan.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\thien-dao-do-thu-quan.jpg"
+    },
+    {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\thuat-xam-sinh-tu-phan.jpg",
       "PackagePath": "staticwebassets\\files\\img\\product\\thuat-xam-sinh-tu-phan.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\tien-nghich.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\tien-nghich.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\tieu-ngao-giang-ho.jpg",
+      "PackagePath": "staticwebassets\\files\\img\\product\\tieu-ngao-giang-ho.jpg"
     },
     {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\truyen-ky-mot-phap-su.jpg",
@@ -5095,6 +5143,10 @@
     {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\product\\y-tuong-dot-pha-trong-quang-cao.jpg",
       "PackagePath": "staticwebassets\\files\\img\\product\\y-tuong-dot-pha-trong-quang-cao.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\quytrinh.drawio.png",
+      "PackagePath": "staticwebassets\\files\\img\\quytrinh.drawio.png"
     },
     {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\files\\img\\shop-cart\\cp-1.jpg",
@@ -5305,24 +5357,24 @@
       "PackagePath": "staticwebassets\\img\\blog\\sidebar\\fp-3.jpg"
     },
     {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\anime.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\anime.jpg"
+    },
+    {
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\kiemhiep.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\kiemhiep.jpg"
+    },
+    {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\pic1.jpg",
       "PackagePath": "staticwebassets\\img\\categories\\pic1.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\pic2.jpg",
-      "PackagePath": "staticwebassets\\img\\categories\\pic2.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\thieunhi.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\thieunhi.jpg"
     },
     {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\pic3.jpg",
-      "PackagePath": "staticwebassets\\img\\categories\\pic3.jpg"
-    },
-    {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\pic4.jpg",
-      "PackagePath": "staticwebassets\\img\\categories\\pic4.jpg"
-    },
-    {
-      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\pic5.jpg",
-      "PackagePath": "staticwebassets\\img\\categories\\pic5.jpg"
+      "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\categories\\trinhtham.jpg",
+      "PackagePath": "staticwebassets\\img\\categories\\trinhtham.jpg"
     },
     {
       "Id": "D:\\năm 3\\web3\\DOAN1\\Doan1\\wwwroot\\img\\discount.jpg",

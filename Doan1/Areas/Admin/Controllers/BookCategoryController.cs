@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Doan1.Models;
 using System.Runtime.InteropServices;
+using Doan1.Ulitities;
 
 namespace Doan1.Areas.Admin.Controllers
 {
@@ -15,12 +16,13 @@ namespace Doan1.Areas.Admin.Controllers
 		}
 		public IActionResult Index()
 		{
-			var items = _context.BookCategorys.ToList();
+            var items = _context.BookCategorys.ToList();
 			return View(items);
 		}
 
         public IActionResult Edit(int? id)
         {
+            
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -47,6 +49,7 @@ namespace Doan1.Areas.Admin.Controllers
 
         public IActionResult Delete(int? id)
         {
+            
             if (id == null || id == 0)
             {
                 return NotFound();
@@ -56,7 +59,6 @@ namespace Doan1.Areas.Admin.Controllers
             {
                 return NotFound();
             }
-
             return View(mn);
         }
         [HttpPost]

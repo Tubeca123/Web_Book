@@ -1,4 +1,6 @@
-﻿using Doan1.Models;
+﻿using Doan1.Areas.Admin.Models;
+using Doan1.Models;
+using Doan1.Ulitities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -21,6 +23,7 @@ namespace Doan1.Controllers
 			return View();
 		}
 
+
 		public IActionResult Privacy()
 		{
 			return View();
@@ -30,5 +33,55 @@ namespace Doan1.Controllers
 		{
 			return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
 		}
-	}
+
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(Account user)
+        {
+            if (user == null)
+            {
+                return NotFound();
+            }
+            var check = _context.Accounts.Where(m => m.Email == user.Email).FirstOrDefault();
+            if (check != null)
+            {
+                Functions._MessageEmail = "Duplication Email";
+                return RedirectToAction("Register", "Home");
+            }
+            Functions._MessageEmail = string.Empty;
+            user.Password = Functions.MD5PassWord(user.Password);
+            _context.Add(user);
+            _context.SaveChanges();
+            return RedirectToAction("Login", "Home");
+        }
+        public IActionResult Login()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Login(Account user)
+        {
+            if (user == null)
+            {
+                return NotFound();
+            }
+            string pw = Functions.MD5PassWord(user.Password);
+            var check = _context.Accounts.Where(m => (m.Email == user.Email) && (m.Password == pw)&&(m.RoleID==2)).FirstOrDefault();
+            if (check == null)
+            {
+                Functions._Message = "Tên hoặc mật khẩu không hợp ";
+                return RedirectToAction("Login", "Home");
+            }
+            Functions._AccountID = check.AccountId;
+            Functions._FullName = check.FullName;
+            Functions._UserName = check.UserName;
+            Functions._Phone = check.Phone;
+            Functions._Avatar = check.Avatar;
+            Functions._Email = string.IsNullOrEmpty(check.Email) ? string.Empty : check.Email;
+            return RedirectToAction("Index", "Home");
+        }
+    }
 }

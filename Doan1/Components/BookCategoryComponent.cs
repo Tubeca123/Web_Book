@@ -11,14 +11,15 @@ namespace Doan1.Components
         {
             _context = context;
         }
-        public async Task<IViewComponentResult> InvokeAsync()
+        public IViewComponentResult Invoke()
         {
-            var list = (from p in _context.BookCategorys
-                              where (p.IsActive == true)
-                              orderby p.BookCategoryID descending
-                              select p).Take(5).ToList();
+            var list = _context.BookCategorys
+                            .Where(p => (p.IsActive == true)&&( p.Position<=5))
+                            .OrderByDescending(p => p.BookCategoryID)
+                            .Take(5)
+                            .ToList();
 
-            return await Task.FromResult((IViewComponentResult)View("Default", list));
+            return View("Default", list);
         }
     }
 }

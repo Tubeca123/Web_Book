@@ -10,5 +10,8 @@ namespace Doan1.Models
 		public DbSet<BookCategory> BookCategorys { get; set; }
 		public DbSet<AdminMenu> AdminMenus { get; set; }
 		public DbSet<Book>Books { get; set; }
+		public DbSet<Account>Accounts { get; set; }
+		public DbSet<BookComment>BookComments { get; set; }
+
 	}
 }
